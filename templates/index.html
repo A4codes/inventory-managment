@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Inventory Management System</h1>
+
+    <div class="form-container">
+
+        <input type="text" id="product_id" placeholder="Product ID">
+
+        <input type="text" id="product_name" placeholder="Product Name">
+
+        <input type="text" id="category" placeholder="Category">
+
+        <input type="number" id="quantity" placeholder="Quantity">
+
+        <input type="number" id="unit_price" placeholder="Unit Price">
+
+        <input type="text" id="supplier_name" placeholder="Supplier Name">
+
+        <button onclick="addProduct()">Add Product</button>
+
+        <button onclick="window.location.href='/dashboard-page'">
+            Dashboard
+        </button>
+
+    </div>
+
+    <h2>Products</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Supplier</th>
+            </tr>
+        </thead>
+
+        <tbody id="productTable">
+
+        </tbody>
+
+    </table>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
