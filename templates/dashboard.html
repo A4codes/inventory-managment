@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Inventory Dashboard</h1>
+
+    <div class="card">
+        <h3>Total Products</h3>
+        <p id="total_products">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Quantity</h3>
+        <p id="total_quantity">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Inventory Value</h3>
+        <p id="total_value">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Low Stock Products</h3>
+        <p id="low_stock">0</p>
+    </div>
+
+    <br>
+
+    <button onclick="window.location.href='/inventory'">
+        Back To Inventory
+    </button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
